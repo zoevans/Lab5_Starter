@@ -25,4 +25,24 @@ function init() {
     }
   });
 
+  //Volume Control function
+  const volInput = document.getElementById("volume");
+  const volIcon = document.querySelector("#volume-controls img");
+  const volControl = document.getElementById("volume-controls");
+
+  volControl.addEventListener('input', (event) => {
+    if(volInput.value == 0){
+      volIcon.src = "assets/icons/volume-level-0.svg";
+    } else if(volInput.value > 0 && volInput.value < 33){
+      volIcon.src = "assets/icons/volume-level-1.svg";
+    } else if(volInput.value > 32 && volInput.value < 67){
+      volIcon.src = "assets/icons/volume-level-2.svg";
+    } else {
+      volIcon.src = "assets/icons/volume-level-3.svg";
+    }
+
+    audioSelect.volume = (volInput.value)/100;
+
+  });
+
 }
