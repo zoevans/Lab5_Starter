@@ -1,4 +1,5 @@
 // expose.js
+//import JSConfetti from 'js-confetti';
 
 window.addEventListener('DOMContentLoaded', init);
 
@@ -42,6 +43,19 @@ function init() {
     }
 
     audioSelect.volume = (volInput.value)/100;
+
+  });
+
+  //Play Sound Button function
+  const playButton = document.querySelector("#expose button");
+  const jsConfetti = new JSConfetti();
+
+  playButton.addEventListener('click', (event) => {
+    audioSelect.play();
+
+    if(imageSelect.src.includes("party-horn.svg")) {
+      jsConfetti.addConfetti();
+    }
 
   });
 
