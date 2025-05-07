@@ -10,7 +10,7 @@ import {
 
 // TODO - Part 2
 
-//isPhoneNumber Unit Tests
+/*----------------isPhoneNumber Unit Tests-------------------*/
 
 //2 True Unit tests
 test('matches 123-456-7890 as a valid phone number', () => {
@@ -35,7 +35,7 @@ test('recognizes an empty string as a non-valid phone number', () => {
 
 
 
-//isEmail Unit Tests
+/*----------------isEmail Unit Tests-------------------*/
 
 //2 True Unit tests
 test('matches standard email form as a valid email', () => {
@@ -59,7 +59,7 @@ test('recognizes email without a "@" as a non-valid email', () => {
   expect(isEmail("fakeEmailgmail.com")).toBe(false);
 });
 
-//isStrongPassword Unit tests
+/*----------------isStrongPassword Unit Tests-------------------*/
 
 //2 True Unit Tests
 test('recognizes password between 4 and 15 characters as strong password', () => {
@@ -81,7 +81,7 @@ test('recognizes password that is less than 4 characters as not a strong passwor
 });
 
 
-//isDate Unit Tests
+/*----------------isDate Unit Tests-------------------*/
 
 //2 True Unit Tests
 test('recognizes standard date format as a date', () => {
@@ -101,7 +101,7 @@ test('recognizes date format where YYYY is not 4 characters as not a date', () =
   expect(isDate("3/7/200500000")).toBe(false);
 });
 
-//isHexColor Unit Tests
+/*----------------isHexColor Unit Tests-------------------*/
 
 //2 True Unit Tests
 test('recognizes standard hex format with 3 characters as a valid hex color', () => {
